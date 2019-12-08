@@ -12,12 +12,12 @@ let Users = (props) => {
         })
 
         // props.setUsers(
-        //     [
-        //         {id: 1, photoURL: "https://langery.ru/upload/iblock/5cb/5cb2ae043187adcf7db4ea0b85d261c8.jpg", followed: true, fullName: "Dmitry", status: "I'm creator of this social network", location: { city: "Minsk", photoURL: "https://langery.ru/upload/iblock/5cb/5cb2ae043187adcf7db4ea0b85d261c8.jpg", country: "Belarus" }},
-        //         {id: 2, photoURL: "https://langery.ru/upload/iblock/5cb/5cb2ae043187adcf7db4ea0b85d261c8.jpg", followed: false, fullName: "Masha", status: "I'm just Masha", location: { city: "Gomel", country: "Belarus" }}, 
-        //         {id: 3, photoURL: "https://langery.ru/upload/iblock/5cb/5cb2ae043187adcf7db4ea0b85d261c8.jpg", followed: true, fullName: "Sveta", status: "I'm Masha's best friend", location: { city: "Kiev", country: "Ukraine" }}, 
-        //         {id: 4, photoURL: "https://langery.ru/upload/iblock/5cb/5cb2ae043187adcf7db4ea0b85d261c8.jpg", followed: false, fullName: "Kirill", status: "I'm like Dmitry but just Kirill", location: { city: "Vitebsk", country: "Belarus" }}
-        //     ]
+            // [
+            //     {id: 1, photoURL: "https://langery.ru/upload/iblock/5cb/5cb2ae043187adcf7db4ea0b85d261c8.jpg", followed: true, fullName: "Dmitry", status: "I'm creator of this social network", location: { city: "Minsk", photoURL: "https://langery.ru/upload/iblock/5cb/5cb2ae043187adcf7db4ea0b85d261c8.jpg", country: "Belarus" }},
+            //     {id: 2, photoURL: "https://langery.ru/upload/iblock/5cb/5cb2ae043187adcf7db4ea0b85d261c8.jpg", followed: false, fullName: "Masha", status: "I'm just Masha", location: { city: "Gomel", country: "Belarus" }}, 
+            //     {id: 3, photoURL: "https://langery.ru/upload/iblock/5cb/5cb2ae043187adcf7db4ea0b85d261c8.jpg", followed: true, fullName: "Sveta", status: "I'm Masha's best friend", location: { city: "Kiev", country: "Ukraine" }}, 
+            //     {id: 4, photoURL: "https://langery.ru/upload/iblock/5cb/5cb2ae043187adcf7db4ea0b85d261c8.jpg", followed: false, fullName: "Kirill", status: "I'm like Dmitry but just Kirill", location: { city: "Vitebsk", country: "Belarus" }}
+            // ]
         // )
     }
 
