@@ -1,3 +1,27 @@
 .descriptionBlock {
     padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
+
+
+.descriptionBlock img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.profileCover {
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.profileCover img {
+    width: 100%;
+}
+
+.profileTitle {
+    font-size: 26px;
+    font-weight: 700;
+}
+

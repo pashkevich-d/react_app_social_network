@@ -1,3 +1,11 @@
 .usersPhoto {
     max-width: 100px;
 }
+
+.selectedPage {
+    font-weight: bold;
+    font-size: 20px;
+}
+.pagination {
+    display: flex;
+}

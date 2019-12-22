@@ -1,8 +1,25 @@
 .header {
     grid-area: h;
-    background-color: green;
+    background-color: #174227;
+    display: flex;
+    justify-content: space-between;
   }
+
+span {
+  display: block;
+  font-size: 18px;
+  max-width: 250px;
+  margin-left: 20px;
+  margin-top: 5px;
+  color: aliceblue;
+  font-family: 'Calistoga', cursive;
+}
   
-  .header img {
+  /* .header img {
     width: 50px;
+  } */
+
+  .loginBlock a {
+    color: white;
+    text-decoration: none;
   }
