@@ -1,9 +1,11 @@
-import React from 'react';
-import Dialogs from './Dialogs';
-import {sendMessageCreator, updateNewMessageCreator} from '../../redux/dialogs-reducer';
-import {connect} from 'react-redux';
-
-
+import React from "react";
+import Dialogs from "./Dialogs";
+import {
+  sendMessageCreator
+} from "../../redux/dialogs-reducer";
+import { connect } from "react-redux";
+import { withAuthRedirect } from "../../hoc/withAuthRedirect";
+import { compose } from "redux";
 
 // const DialogsContainer = (props) => {
 //     return <StoreContext.Consumer>
@@ -20,29 +22,28 @@ import {connect} from 'react-redux';
 //     </StoreContext.Consumer>
 // }
 
-let mapStateToProps = (state) => {
-    return {
-        messages: state.messages
+let mapStateToProps = state => {
+  return {
+    messages: state.messages
+  };
+};
+
+let mapDispatchToPtops = dispatch => {
+  return {
+    sendMessage: newMessage => {
+      dispatch(sendMessageCreator(newMessage));
     }
-}
+  };
+};
 
-let mapDispatchToPtops = (dispatch) => {
-     return {
-        updateNewMessage: (newMessage) => {
-            dispatch(updateNewMessageCreator(newMessage));
-        },
-        sendMessage: () => {
-            dispatch(sendMessageCreator());
-        }
-     }
-}
+// let AuthRedirectComponent = withAuthRedirect(Dialogs);
 
-const DialogsContainer = connect(mapStateToProps, mapDispatchToPtops)(Dialogs);
+// const DialogsContainer = connect(mapStateToProps, mapDispatchToPtops)(AuthRedirectComponent);
 
 // const DialogsContainer = (props) => {
 // // debugger;
 //     let state = props.store.getState().messages;
-    
+
 //     let onSendMessageClick = () => {
 //         props.store.dispatch(sendMessageCreator());
 //     }
@@ -54,4 +55,7 @@ const DialogsContainer = connect(mapStateToProps, mapDispatchToPtops)(Dialogs);
 //     return <Dialogs updateNewMessage={onNewMessageChange} sendMessage={onSendMessageClick} messages={state}/>
 // }
 
-export default DialogsContainer;
+export default compose(
+  connect(mapStateToProps, mapDispatchToPtops),
+  withAuthRedirect
+)(Dialogs);
