@@ -6,6 +6,11 @@ import {
   addPostActionCreator
 } from "./../../../redux/profile-reducer";
 import { Field, reduxForm } from "redux-form";
+import {
+  requiredField,
+  maxLengthCreator
+} from "../../../utils/validators/validatots";
+import { Textarea } from "../../common/FormsControls/FormControls";
 
 const MyPosts = props => {
   let postsElements = props.posts.map(p => (
@@ -29,10 +34,18 @@ const MyPosts = props => {
   );
 };
 
+const maxLength10 = maxLengthCreator(10);
+
 let AddNewPostForm = props => {
   return (
     <form onSubmit={props.handleSubmit} className={s.addPostBlock}>
-      <Field name="newPostText" component="textarea" /> <br />
+      <Field
+        name="newPostText"
+        component={Textarea}
+        validate={[requiredField, maxLength10]}
+        placeholder="Post message"
+      />{" "}
+      <br />
       <button>Add post</button>
     </form>
   );
