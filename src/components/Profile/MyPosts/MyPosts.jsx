@@ -12,7 +12,35 @@ import {
 } from "../../../utils/validators/validatots";
 import { Textarea } from "../../common/FormsControls/FormControls";
 
-const MyPosts = props => {
+// class MyPosts extends React.PureComponent {
+//   // shouldComponentUpdate(nextProps, nextState) {
+//   //   return nextProps != this.props || nextState != this.state;
+//   // }
+
+//   render() {
+//     let postsElements = this.props.posts.map(p => (
+//       <Post message={p.message} likeCount={p.likesCount} />
+//     ));
+
+//     let newPost = React.createRef();
+
+//     let onAddPost = values => {
+//       this.props.addPost(values.newPostText);
+//       // let text = newPost.current.value;
+//       // props.dispatch(addPostActionCreator());
+//       // newPost.current.value = "";
+//     };
+
+//     return (
+//       <div>
+//         <AddNewPostFormRedux onSubmit={onAddPost} />
+//         <div className={s.posts}>{postsElements}</div>
+//       </div>
+//     );
+//   }
+// }
+
+const MyPosts = React.memo(props => {
   let postsElements = props.posts.map(p => (
     <Post message={p.message} likeCount={p.likesCount} />
   ));
@@ -32,7 +60,7 @@ const MyPosts = props => {
       <div className={s.posts}>{postsElements}</div>
     </div>
   );
-};
+});
 
 const maxLength10 = maxLengthCreator(10);
 
